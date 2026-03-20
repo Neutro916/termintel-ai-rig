@@ -1,13 +1,19 @@
 {
-  "name": "termintel-ai-rig",
+  "name": "termintel-rig",
   "version": "1.0.0",
-  "description": "A mobile-first AI rig terminal interface",
-  "main": "src/index.js",
+  "description": "Mobile-first AI Orchestration Rig",
+  "main": "bridge.js",
+  "bin": {
+    "termintel": "./bridge.js"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node bridge.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "node bridge.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
@@ -17,7 +23,9 @@
     "react-router-dom": "^7.13.1",
     "react-scripts": "5.0.1",
     "xterm": "^5.3.0",
-    "xterm-addon-fit": "^0.8.0"
+    "xterm-addon-fit": "^0.8.0",
+    "express": "^5.2.1",
+    "ws": "^8.19.0"
   },
   "browserslist": {
     "production": [
@@ -30,5 +38,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "keywords": ["ai", "terminal", "orchestration", "cli", "rig"],
+  "author": "Neutro916",
+  "license": "MIT",
+  "files": [
+    "build",
+    "public",
+    "bridge.js",
+    "package.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

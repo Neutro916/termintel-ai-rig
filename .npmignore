@@ -1,0 +1,11 @@
+node_modules/
+src/
+backend/
+*.log
+.git/
+.github/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+coverage/
