@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--txt);
+}
+
+/* Global animations */
+@keyframes terminal-glow {
+  0% { text-shadow: 0 0 8px rgba(26, 159, 255, 0.4); }
+  50% { text-shadow: 0 0 20px rgba(26, 159, 255, 0.8); }
+  100% { text-shadow: 0 0 8px rgba(26, 159, 255, 0.4); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Global utilities */
+.glow {
+  animation: terminal-glow 2s infinite;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bd);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bd2);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(26, 159, 255, 0.3);
+  color: var(--bg);
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}

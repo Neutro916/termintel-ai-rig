@@ -1,0 +1,244 @@
+/* CLI Page - TermIntel v2 Navy Blue Theme */
+.cli-page {
+  background-color: #000000;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.cli-header {
+  background-color: #0b1622;
+  border-bottom: 1px solid #112236;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.terminal-icon {
+  font-size: 1.5rem;
+  color: #1a9fff;
+}
+
+.cli-header h1 {
+  color: #1a9fff;
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.connection-status {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+
+.connection-status.connected {
+  background-color: rgba(26, 159, 255, 0.15);
+  color: #1a9fff;
+  border: 1px solid #1a9fff;
+}
+
+.connection-status.disconnected {
+  background-color: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-button {
+  background-color: transparent;
+  color: #888;
+  border: 1px solid #112236;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-button:hover {
+  color: #1a9fff;
+  border-color: #1a9fff;
+}
+
+.tab-button.active {
+  background-color: rgba(26, 159, 255, 0.15);
+  color: #1a9fff;
+  border-color: #1a9fff;
+  box-shadow: 0 0 15px rgba(26, 159, 255, 0.2);
+}
+
+.cli-main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.terminal-container,
+.editor-container {
+  flex: 1;
+  background-color: #0d1b2a;
+  border: 1px solid #112236;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.editor-toolbar {
+  background-color: #0b1622;
+  padding: 12px 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-bottom: 1px solid #112236;
+}
+
+.language-select {
+  background-color: #0d1b2a;
+  color: #1a9fff;
+  border: 1px solid #112236;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.toolbar-button {
+  background-color: transparent;
+  color: #1a9fff;
+  border: 1px solid #1a9fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toolbar-button:hover {
+  background-color: rgba(26, 159, 255, 0.15);
+  box-shadow: 0 0 15px rgba(26, 159, 255, 0.2);
+}
+
+.scripts-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.scripts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.script-card {
+  background-color: #0d1b2a;
+  border: 1px solid #112236;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.script-card h3 {
+  color: #1a9fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.script-item {
+  background-color: #0b1622;
+  border: 1px solid #112236;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.script-item:hover {
+  border-color: #1a9fff;
+  background-color: #0d1b2a;
+  box-shadow: 0 0 15px rgba(26, 159, 255, 0.1);
+}
+
+.script-name {
+  display: block;
+  color: #1a9fff;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.script-desc {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.cli-footer {
+  background-color: #0b1622;
+  border-top: 1px solid #112236;
+  padding: 12px 25px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.footer-info span {
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cli-header {
+    padding: 12px 15px;
+  }
+  
+  .cli-main {
+    padding: 15px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .tab-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .scripts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-info {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

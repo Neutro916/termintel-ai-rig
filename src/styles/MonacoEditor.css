@@ -1,0 +1,66 @@
+.monaco-editor-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.monaco-editor-container .monaco-editor {
+  border-radius: 8px;
+}
+
+/* Override Monaco default styles to match TermIntel v2 Navy theme */
+.monaco-editor .margin {
+  background-color: var(--bg1) !important;
+}
+
+.monaco-editor .line-numbers {
+  color: var(--txt3) !important;
+}
+
+.monaco-editor .current-line ~ .line-numbers {
+  color: var(--blue) !important;
+}
+
+/* Scrollbar styling */
+.monaco-editor .scrollbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.monaco-editor .scrollbar .slider {
+  background-color: var(--bd) !important;
+}
+
+.monaco-editor .scrollbar .slider:hover {
+  background-color: var(--bd2) !important;
+}
+
+/* Focus outline */
+.monaco-editor-container:focus-within {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Selection styling */
+.monaco-editor .selected-text {
+  background-color: var(--blue) !important;
+  opacity: 0.3;
+}
+
+/* Cursor styling */
+.monaco-editor .cursor {
+  background-color: var(--blue) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .monaco-editor-container {
+    font-size: 12px;
+  }
+  
+  .monaco-editor .line-numbers {
+    font-size: 12px;
+  }
+}
